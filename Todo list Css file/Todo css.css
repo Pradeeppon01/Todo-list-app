@@ -1,0 +1,122 @@
+body {
+  background-image:url('https://images-cdn.newscred.com/Zz04NjA3ZjljMjQ0ODkxMWViOWRjYzU1OGJkNjI1ZjVkZA==') ;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.Container{
+  background-color:white;
+  height:500px;
+  width:40%;
+  position:relative;
+  top:78px;
+  border-radius:25px;
+  background:transparent;
+  backdrop-filter:blur(10px);
+  box-shadow:0px 0px 4px  black;
+}
+
+.titleName{
+  text-align:center;
+  font-size:20px;
+  font-weight:600;
+  margin-top:10px;
+  color:white;
+}
+.inputContainer{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:5px;
+  padding-top:5px;
+}
+.inputField{
+  width:60%;
+  height:29px;
+
+  box-shadow:0px 0px 3px black;
+  border:none;
+  font-size:15px;
+  font-weight:700;
+}
+
+.inputButton{
+  height:32px;
+  width:30px;
+  margin-left:0;
+  position:relative;
+  appearance:none;
+  border:0.5px  solid;
+  border-shadow:0px 0px 3px black;
+  
+}
+.inputButton img{
+  height:32px;
+  width:30px;
+  position:absolute;
+  top:0;
+  left:0;
+  margin:0;
+  padding:o;
+}
+#element{
+  width:55%;
+  height:fit-content;
+  background:white;
+  margin-top:5px;
+  text-align:left;
+  font-size:15px;
+  font-weight:500;
+  position:relative;
+  padding:10px;
+  padding-right:80px;
+  margin-top:10px;
+  border-radius:5px;
+  word-wrap:break-word;
+  right:0;
+  transition:.2s;
+  cursor:pointer;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.ListContainer{
+align-content:center;
+}
+.List{
+  height:80%;
+  width:90%;;
+  margin:auto;
+  right:0;
+  left:0;
+  bottom:0;
+  position:absolute;
+  overflow-x:hidden;
+  overflow-y:scroll
+}
+
+.List::-webkit-scrollbar{
+  -webkit-appearance:none;
+  appearance:none;
+}
+.List img{
+  height:20px;
+}
+#tick{
+  position:absolute;
+  margin:auto;
+  height:20px;
+  top:0;
+  bottom:0;
+  right:35px;
+  }
+#del{
+  position:absolute;
+  margin:auto;
+  height:20px;
+  top:0;
+  bottom:0;
+  right:10px;
+}
+
+#element:hover{
+  transform: scale(1.1);
+}

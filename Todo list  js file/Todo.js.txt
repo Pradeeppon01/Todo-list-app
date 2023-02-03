@@ -1,0 +1,47 @@
+var element=[]
+window.onload=function(){
+  if(localStorage.getItem('todoElements')!=null){
+    element=JSON.parse(localStorage.getItem('todoElements'))
+    display()
+  }
+}
+function addTask(){
+  if(document.querySelector('input').value.trim()!==''){
+    element.push(document.querySelector('input').value.trim())
+    if(localStorage.getItem('todoElements')==null){
+      localStorage.setItem('todoElements',JSON.stringify(element))
+    }else{
+      localStorage.setItem('todoElements',JSON.stringify(element))
+    }
+    display()
+  }
+}
+function display(){
+  document.querySelector('.List').innerHTML=''
+  let list=document.querySelector('.List')
+  for(var i=0;i<element.length;i++)
+    list.innerHTML+="<center><div id='element'>"+element[i]+"<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT0v3iRCur1LS3GLaUcNOfL-2aMWZX6zHBbA&usqp=CAU' id='tick' onclick='strike("+i+")'/><img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJv-fCVuK-3TcGSqk86Lw-v-81AOtabkskt3txwJcYWjzeCa5PnXUYIqYV0eajW6gViPE&usqp=CAU' id='del' onclick='del("+i+")'/> </div> </center>"
+}
+function del(index){
+element.splice(index,1)
+   if(localStorage.getItem('todoElements')==null){
+      localStorage.setItem('todoElements',JSON.stringify(element))
+    }else{
+      localStorage.setItem('todoElements',JSON.stringify(element))
+    }
+  display()
+}
+function strike(index){
+  if(element[index].includes("<strike>")){
+    element[index]=element[index].replace("<strike>","")
+    element[index]=element[index].replace("</strike>","")
+  }else {
+    element[index]="<strike>"+element[index]+"</strike>"
+  }
+   if(localStorage.getItem('todoElements')==null){
+      localStorage.setItem('todoElements',JSON.stringify(element))
+    }else{
+      localStorage.setItem('todoElements',JSON.stringify(element))
+    }
+  display()
+}
